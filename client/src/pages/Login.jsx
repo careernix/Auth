@@ -26,7 +26,7 @@ function Login() {
       console.log("login", response.data);
 
       if (response.data.user) {
-        Cookies.set("token", response.data.user, { expires: 1 / 6 });
+        Cookies.set("token", response.data.token, { expires: 1 / 6 });
         navigate("/home");
       } else {
         setErrorMessage("Invalid credentials, please try again.");
